@@ -10,6 +10,7 @@
     <script src="./js/java.js"></script>
     <script>
         $(document).ready(function(){
+            let current =0
             $('.page02_button li').eq(0).addClass('on')
 
             $('.page01_centerList li').hover(function(){
@@ -28,6 +29,7 @@
             $('.page02_button li').eq(page02).addClass('on')
 
             })
+
             $('nav li').click(function(e){
                     e.preventDefault()
                     var q=$(this).index()
@@ -59,8 +61,26 @@
                 },function(){
                     $(this).removeClass('on')
                     $('.page03_text').removeClass('on')
-                }
-                )
+                })
+
+                
+            $('.page02_button li').click(function(){
+                var i= $(this).index()
+                console.log(i)
+                move(i)
+
+                function move(i){
+                if(current == i)return;//같은 버튼을 클릭했을때 실행되지 않게 함 
+                let currentE1 = $('.page1023 li').eq(current);//슬라이드에서 현재보이는 이미지 li
+                let nextE1 = $('.page1023 li').eq(i); //슬라이드에서 다음에 보이는 이미지 li
+
+
+                currentE1.css({opacity:1}).stop().animate({opacity:0})
+                nextE1.css({opacity:0}).stop().animate({opacity:1})
+                current =i
+            
+        }
+            })
             })
         
     </script>
@@ -80,19 +100,33 @@
                         <li><a href="#">메뉴5</a></li>
                     </ul>
                 </nav>
+
                 <div class="login">
                     <div class="login_top">
                         <a href="#">고객센터</a>
                         <a href="#">이벤트</a>
-                        
                     </div>
                     <div class="login_bottom">
                         <a href="#">로그인</a>
                         <a href="#">회원가입</a>
                     </div>
+
+                        <div class="M_login">
+                            <img src="">
+                        </div>
                 </div>
             </div>
         </header>
+        <div class="nav_menuM">
+            <ul class="menuM">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </div>
+
         <section>
             <div class="page01">
                 <div class="page01_left">
@@ -165,6 +199,16 @@
                         <li></li>
                         <li></li>
                     </ul>
+                </div>
+
+                    <div class="page02_view1023">
+                        <ul class="page1023">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+
+                        </ul>
                     </div>
 
                 </div>
@@ -172,17 +216,16 @@
         </section>
         <section>
             <div class="page03">
-                <h1><a href="sub.html">클릭
-                </a></h1>  
+        
                 <div class="page03_img">
                 
                     <ul>
                         <li>
                             <div class="page03_text">
-                                <h1>타이틀제목</h1>
+                                <h1>상품이름</h1>
                                 <p>부가설명</p>
-                                <p>기타꼬리말</p>
-                                <a href="#"> Check-></a>
+                                <p>끝장나는상품</p>
+                                <a href="sub.html">Click-></a>
 
                             </div>
 

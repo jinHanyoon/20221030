@@ -1,10 +1,11 @@
-*{margin: 0; padding: 0;}
+*{margin: 0; padding: 0;
+font-family: sans-serif;}
 ul,li{list-style: none;}
 a{text-decoration: none;
     color: #606060;}
 section{width: 100%; 
         height: 700px;
-    background-color: orange;}
+   }
         
 #wrap{width: 100%;}
 header{width: 100%;
@@ -119,6 +120,7 @@ margin: 0 auto;
             margin-right: 10px;}
 
 .sub01_box p{margin:30px 10px 30px 0;
+    font-weight: 600;
     color: #606060;}
 
 
@@ -131,12 +133,16 @@ margin: 0 auto;
     border-bottom: 1px solid black;
     margin-left: 20px;
     color: rgb(75, 74, 74);
-                            font-size: 12px;}
+     font-size: 12px;}
+
+.sub01_rightinfo a{color: blue;
+            border-bottom: 1px solid blue;} 
 
 .sub01_lastbox{}
-.sub01_lastbox h1{color: #606060;
+.sub01_lastbox h2{color: #606060;
                     margin-left: 10px;}
 .sub01_lastbox p{ margin: 10px 10px 10px 10px;
+    font-size: 13px;
     }
 
 .sub01_choise{width: 500px; height: 100px;
@@ -181,6 +187,7 @@ color: #f8f8f8;
         border: 1px solid #ccc;
             margin: 0 auto;}
 .userText{ float: left;
+    font-weight: 600;
               }
 .userText p{margin: 30px;
         color: #606060;}
